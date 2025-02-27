@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+configure --host=x86_64-linux-gnu --target=xtensa-esp-elf \
+	     --with-auto-load-dir=$debugdir:$datadir/auto-load
+	     --with-auto-load-safe-path=$debugdir:$datadir/auto-load
+	     --with-expat
+	     --with-gdb-datadir=//share/gdb
+	     --with-jit-reader-dir=//lib/gdb
+	     --without-libunwind-ia64
+	     --with-lzma
+	     --without-babeltrace
+	     --without-intel-pt
+	     --without-xxhash
+	     --without-python
+	     --with-python-libdir=/opt/python-x86_64-linux-gnu-3.12.0/lib
+	     --without-debuginfod
+	     --with-curses
+	     --without-guile
+	     --without-amd-dbgapi
+	     --disable-source-highlight
+	     --enable-threading
+	     --enable-tui
+	     --without-system-readline
+	     --with-separate-debug-dir=//lib/debug
